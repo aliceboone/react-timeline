@@ -6,9 +6,8 @@ const Timeline = (props) => {
 
   const eventComponents = props.events.map((event, i) => {
     return(
-      <div className='event-timeline'>
+      <div key={i}>
         <TimelineEvent
-          key={i}
           person={event.person}
           status={event.status}
           timeStamp={event.timeStamp}
